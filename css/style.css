@@ -8820,6 +8820,9 @@ h1, h2, h3, h4, h5,
   padding: 2em;
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
+  display: flex; /* Thêm flexbox để căn giữa */
+  justify-content: center; /* Căn giữa ngang */
+  align-items: center; /* Căn giữa dọc */
   -webkit-box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
   box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17); }
@@ -9682,3 +9685,148 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+/* Mũi tên điều hướng cho slider 1 */
+.slider-wrapper-1 .swiper-button-prev,
+.slider-wrapper-1 .swiper-button-next {
+  position: absolute;
+  top: 13.5%;
+  transform: translateY(-100%);
+  z-index: 10;
+  color: #fff;
+}
+
+.slider-wrapper-1 .swiper-button-prev {
+  left: 100px;
+}
+
+.slider-wrapper-1 .swiper-button-next {
+  right: 50px;
+}
+
+/* Mũi tên điều hướng cho slider 2 */
+.slider-wrapper-2 .swiper-button-prev,
+.slider-wrapper-2 .swiper-button-next {
+  position: absolute;
+  top: 28.5%;
+  transform: translateY(-100%);
+  z-index: 10;
+  color: #fff;
+}
+
+.slider-wrapper-2 .swiper-button-prev {
+  left: 100px;
+}
+
+.slider-wrapper-2 .swiper-button-next {
+  right: 50px;
+}
+
+/* Mũi tên điều hướng cho slider 3 */
+.slider-wrapper-3 .swiper-button-prev,
+.slider-wrapper-3 .swiper-button-next {
+  position: absolute;
+  top: 42.5%;
+  transform: translateY(-100%);
+  z-index: 10;
+  color: #fff;
+}
+
+.slider-wrapper-3 .swiper-button-prev {
+  left: 100px;
+}
+
+.slider-wrapper-3 .swiper-button-next {
+  right: 50px;
+}
+
+/* Mũi tên điều hướng cho slider 4 */
+.slider-wrapper-4 .swiper-button-prev,
+.slider-wrapper-4 .swiper-button-next {
+  position: absolute;
+  z-index: 10;
+  color: #fff;
+}
+
+.slider-wrapper-4 .swiper-button-prev {
+  left: 0px;
+}
+
+.slider-wrapper-4 .swiper-button-next {
+  right: 0px;
+}
+
+/* Hover: Đổi màu mũi tên */
+.slider-wrapper-1 .swiper-button-prev:hover,
+.slider-wrapper-1 .swiper-button-next:hover,
+.slider-wrapper-2 .swiper-button-prev:hover,
+.slider-wrapper-2 .swiper-button-next:hover,
+.slider-wrapper-3 .swiper-button-prev:hover,
+.slider-wrapper-3 .swiper-button-next:hover,
+.slider-wrapper-4 .swiper-button-prev:hover,
+.slider-wrapper-4 .swiper-button-next:hover {
+  color: #4658ff;
+}
+
+/* Style mặc định cho tất cả bullet trong swiper-pagination-4 */
+.swiper-pagination-4 .swiper-pagination-bullet {
+  background-color: #ffffff;
+  opacity: 1;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Chấm active: đổi màu thành xanh */
+.swiper-pagination-4 .swiper-pagination-bullet-active {
+  background-color: #4658ff;
+  transform: scale(1.2);
+}
+
+/* Hover (nếu cần) */
+.swiper-pagination-4 .swiper-pagination-bullet:hover {
+  background-color: #4658ff;
+}
+
+/* Bố cục Read More */
+.read-more-box {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+}
+
+.read-more-box input[type="checkbox"] {
+  display: none;
+}
+
+.read-more-box .more {
+  display: none;
+}
+
+.read-more-box .dots {
+  display: inline;
+}
+
+.read-more-box input[type="checkbox"]:checked ~ .content .dots {
+  display: none;
+}
+
+.read-more-box input[type="checkbox"]:checked ~ .content .more {
+  display: inline;
+}
+
+.toggle-btn {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #2b8eec;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.toggle-btn::before {
+  content: "Read More";
+}
+
+.read-more-box input[type="checkbox"]:checked ~ .toggle-btn::before {
+  content: "Read Less";
+}
+
